@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+$primary-color: #673ab7;
+$dark-primary-color: #512da8;
+$light-primary-color: #d1c4e9;
+$accent-color: #ff4081;
+$text-color: #212121;
+$secondary-text-color: #757575;
+
+html, body{
+  font-family: 'Lato', sans-serif;
+  color: $text-color;
+  background-color: $light-primary-color;
+}
+
+.item{
+  margin: 20px;
+  display: inline;
+  float: left;
+}
+
+.img-thumbnail{
+  cursor: pointer;
+}
+
+.rating{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.btn-primary{
+  background-color: $accent-color;
+  margin-right: 20px;
+  border: 1px solid $accent-color;
+}
+
+.btn-primary:hover{
+  transition-duration: 0.3s;
+  background-color: darken($accent-color, 10%);
+  margin-right: 20px;
+  border: 1px solid darken($accent-color, 10%);
+}
+
+.text-box{
+  display: block;
+  margin: 30px;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  border-bottom: 2px solid $accent-color;
+  background-color: transparent;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.form-group{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#add-celebration{
+  padding: 10px 100px;
+  margin-bottom: 30px;
+}

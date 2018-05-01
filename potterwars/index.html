@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113356087-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-113356087-1');
+    </script>
+    <meta charset="UTF-8">
+    <title>Potter Wars</title>
+    <meta name="description" content="Potter Wars is a light-weight, easy Harry Potter themed game.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="icon" href="assets/images/Health Points.png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Zeyada" rel="stylesheet">
+    <audio autoplay loop auto><source src="assets/music/soundtrack.mp3" type="audio/mpeg" /></audio>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/hp.png" width="30" height="30" class="d-inline-block align-top" alt="harry potter favicon">
+        Potter Wars
+      </a>
+      <button id="reset-game" class="btn btn-outline-success" type="button">Reset</button>
+    </nav>
+
+
+    <div id="header" class="container">
+      <div class="row">
+        <div class="col">
+          <img id="logo-img" src="assets/images/logo.png" alt="harry potter logo">
+        </div>
+      </div>
+    </div>
+
+<!--GAME SETUP-->
+      <div class="container" id="game-setup">
+        <div class="good-characters">
+          <div class="row">
+            <div class="col">
+              <h3>First, choose your player</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/dumbledore.png" id="albus" alt="dumbledore image">
+              <h4>Albus Dumbledore</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/harry.png" id="harry" alt="potter image">
+              <h4>Harry Potter</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/hermione.png" id="hermione" alt="granger image">
+              <h4>Hermione Granger</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/ron.png" id="ron" alt="weasley image">
+              <h4>Ron Weasley</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 offset-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/dobby.png" id="dobby" alt="dobby image">
+              <h4>Dobby the House Elf</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="good-character" src="assets/images/mcgonagall.png" id="mcgonagall" alt="mcgonagall image">
+              <h4>Minerva McGonagall</h4>
+            </div>
+        </div>
+        </div>
+
+        <div class="bad-characters" id="bad-characters">
+          <div class="row">
+            <div class="col">
+              <h3>Now pick your opponent</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <img class="bad-character" src="assets/images/voldemort.png" id="voldemort" alt="voldemort image">
+              <h4>Lord Voldemort</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="bad-character" src="assets/images/snape.png" id="snape" alt="snape image">
+              <h4>Severus Snape</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="bad-character" src="assets/images/draco.png" id="draco" alt="draco image">
+              <h4>Draco Malfoy</h4>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <img class="bad-character" src="assets/images/bella.png" id="bella" alt="bella image">
+              <h4>Bellatrix Lestrange</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button type="button" id="btn-start" class="btn btn-success">Let's play!</button>
+          </div>
+        </div>
+      </div> <!--Close game set up-->
+
+<!--GAME PLAY-->
+      <div id="game-play">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div id="instructions">
+
+              <h2>Instructions</h2>
+              <p class="instructions"> The rules are simple: take it in turns to attack. Each attack results in the lost of health points (Health Points). If you run out of Health Points, you die and you lose the game.
+                If you rid your opponent of their Health Points first, they die and you win!</p>
+              <p class="instructions"> Every time you attack, your attack power is increased by its base rate. I.e. if your original attack power was 5, then it will increase by 5 points each time. Your opponents attack power does not increase.</p>
+            </div>
+              <h2 id="start-fight-title">Ready? Let's get started!</h2>
+              <h2 class="declare-fight" id="fight-characters"></h2>
+              <button type="button" class="btn btn-success" id="start-fight">Fight!</button><br />
+              <button type="button" class="btn btn-success" id="scaredy-cat">No wait, I'm scared!</button>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="fight-row">
+          <p id="fight-feed"></p>
+          <div class="row">
+            <div id="good-char-col" class="col">
+              <h5 id="good-char-name"></h5>
+                <p id="good-health-points"></p>
+                <p id="attack-power"></p>
+                <img id="char-image" src="#"  alt="character image generated"/>
+                <button type="button" class="btn btn-success" id="attack-button">Attack</button>
+            </div>
+            <div id="bad-char-col" class="col">
+              <h5 id="bad-char-name"></h5>
+                <p id="bad-health-points"></p>
+                <p id="counter-attack-power"></p>
+                <img id="opponent-image" src="#"  alt="opponent image generated" />
+            </div>
+
+          </div>
+          <p>
+             Battles Won: <span id="battle-wins"></span> 
+          </p>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="assets/js/game.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+
+  </body>
+
+</html>

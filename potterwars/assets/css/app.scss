@@ -1,0 +1,258 @@
+body{
+  background-color: #2A2A46;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  color: #efefef;
+  padding-bottom: 50px;
+}
+
+p{
+  font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+h1{
+  font-family: 'Zeyada', cursive;
+  font-size: 100px;
+  margin:20px 0;
+}
+
+h2{
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h3{
+  margin: 10px 0 40px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h4{
+  margin: 20px 0;
+  font-weight: inherit;
+}
+
+#btn-start{
+  display:none;
+}
+
+#header{
+  text-align: center;
+  position: relative;
+  min-height: 100%;
+}
+
+#header img{
+  max-height: 200px;
+  margin: 30px 0;
+
+}
+
+#game-setup{
+  text-align: center;
+}
+
+#game-play{
+  min-height: 600px;
+  display: none;
+  text-align: center;
+}
+
+#fight-row{
+  display: none;
+}
+
+#good-char-col{
+  text-align: left;
+  font-size: 14px;
+  background-color: #999;
+  margin: 10px;
+  color:  #2f3640;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+#bad-char-col{
+  text-align: right;
+  background-color: #999;
+  margin: 10px;
+  color: #2f3640;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+#char-image{
+  max-height: 200px;
+  margin-right: 20px;
+}
+
+#opponent-image{
+  max-height: 200px;
+}
+
+.btn-success{
+  background-color: #7f0909;
+  border: 2px solid #d3a625;
+  border-radius: 1px;
+  margin: 30px 0;
+  padding: 5px 100px;
+}
+
+.btn-success:hover{
+  background-color: #ae0001;
+  border: 2px solid #eeba30;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-success:active{
+  background-color: #ae0001 !important;
+  border: 2px solid #eeba30 !important;
+  outline: none  !important;
+  box-shadow: none;
+}
+
+.btn-success:focus{
+  background-color: #ae0001;
+  border: 2px solid #eeba30;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.5) !important;
+}
+
+.btn-outline-success{
+  color: #ae0001;
+  border: 2px solid #ae0001;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+.btn-outline-success:hover{
+  background-color: #ae0001 !important;
+  border: 2px solid #ae0001 !important;
+  color: #fff !important;
+  border-radius: 4px;
+}
+
+.btn-outline-success:focus{
+  background-color: #ae0001 !important;
+  border: 2px solid #ae0001 !important;
+  color: #fff !important;
+  border-radius: 4px;
+  box-shadow: none !important;
+}
+
+.btn-outline-success:active{
+  background-color: #ae0001 !important;
+  border: 2px solid #ae0001 !important;
+  color: #fff !important;
+  border-radius: 4px;
+}
+
+
+.game-instructions{
+  padding:40px;
+  border-top: 8px solid #7f0909;
+}
+
+.good-characters{
+  margin-top: 20px;
+  background: #999;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+.bad-characters{
+  display: none;
+  margin-top: 20px;
+  background: #999;
+  padding: 40px;
+  border-radius: 6px;
+
+}
+
+.declare-fight {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.good-character{
+  max-height:200px;
+  border-bottom: 4px solid #30336b;
+}
+
+.good-character:hover{
+  transition-duration: 0.4s;
+  border-bottom: 15px solid #7f0909;
+  cursor: pointer;
+}
+
+.bad-character{
+  max-height:200px;
+  border-bottom: 4px solid #30336b;
+}
+
+.bad-character:hover{
+  transition-duration: 0.4s;
+  border-bottom: 15px solid #0d6217;
+  cursor: pointer;
+}
+
+.instructions{
+  font-size: 16px;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.navbar {
+  background-color: #eee;
+  color: #000;
+}
+
+.navbar img{
+  margin-right: 20px;
+  max-width: 90%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #logo-img {
+        max-width: 90%;
+    }
+
+    .good-character{
+      max-width: 70%;
+    }
+
+    h2{
+      font-size: 30px;
+    }
+
+    .declare-fight{
+      font-size:30px;
+    }
+
+    .btn-success{
+        padding: 5px 40px;
+    }
+
+    #opponent-image{
+      max-height:100px;
+      float: left;
+    }
+
+    #char-image{
+      max-height: 100px;
+    }
+
+    .good-character{
+      max-height: 100px;
+    }
+
+    .bad-character{
+      max-height: 100px;
+    }
+}

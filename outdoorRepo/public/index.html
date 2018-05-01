@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="assets/images/logo.png" type="image/gif" sizes="16x16">
+
+  <title>outdoorRepo</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116544559-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116544559-1');
+  </script>
+
+  <!-- Google Fonts API -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css">
+
+  <!-- Scripts -->
+  <!-- <script type="text/javascript" src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=d4270748e825e869ba441d1ff08433eaeef5b6cf"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@5.5.0/dist/typeit.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
+
+</head>
+
+<body onload="checkCookie()">
+
+  <header>
+
+
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+        <a href="#" class="uk-navbar-item uk-logo"> <img class=".uk-preserve-width" src="assets/images/logo.png"></a>
+      </div>
+      <div class="uk-navbar-right">
+        <div class="uk-navbar-item">
+          <a class="uk-button uk-button-primary" href="login.html">Sign Up</a>
+        </div>
+        <div class="uk-navbar-item">
+          <a class="uk-button uk-button-default" href="login.html">Login</a>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+
+
+
+    <div class="uk-child-width-expand@s uk-text-center uk-grid-large section-one" uk-grid>
+      <div>
+        <h1>Who Are We.</h1>
+        <p>
+          We are a small non-profit organization that has come up with a scalable way to fund charities through affiliate programming.
+        </p>
+        <a class="uk-button uk-button-primary" id="learnMore">Learn More</a>
+      </div>
+      <div>
+        <img src="assets/images/003-skiing.png" alt="skiing graphic" />
+      </div>
+    </div>
+
+    <div uk-parallax="opacity: 0,1; viewport: 0.5;" class="uk-child-width-expand@s uk-text-center uk-margin-remove uk-grid-large section-two" uk-grid>
+      <div>
+        <img src="assets/images/006-piggy-bank.png" alt="skiing graphic" />
+      </div>
+
+      <div>
+        <h1>How It Works.</h1>
+        <p>
+          It's simple, really. Set up an account, let us know where you like to shop, and we'll take care of the rest. Then just shop as you usually do, and BAM! you just donated to charity without even having to think about it.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+    <div uk-parallax="opacity: 0,1; viewport: 0.5;" class="uk-text-center section-three">
+      <h1>Helping Communites. One at a Time.</h1>
+      <h3>...well, three at a time :)</h3>
+      <p>
+        At outdoorRepo, we aim to break down social barriers one at a time. That's why we need people like you!
+        <br / /> We've paired up with three charities. Once you sign up, you just let us know which one you'd like your contributions to go to. We'll do the rest.
+      </p>
+      <p>
+        And of course, you can change your charity at any time!
+      </p>
+
+      <div class="uk-child-width-expand@s" uk-grid>
+
+        <div class="uk-width-1-3">
+          <img class="flat-icon" src="assets/images/water.png">
+          <a href="https://water.org/" target="_blank">
+            <h3>Water.org</h3>
+          </a>
+          <p>Water.org has empowered 10 million people with access to safe water and sanitation through affordable financing.</p>
+
+        </div>
+        <div class="uk-width-1-3">
+          <img class="flat-icon" src="assets/images/sierra-club.png">
+          <a href="https://www.sierraclubfoundation.org/" target="_blank">
+            <h3>SierraClubFoundation.org</h3>
+          </a>
+          <p>The Sierra Club Foundation promotes climate solutions, conservation, and movement building through a powerful combination of strategic philanthropy and grassroots advocacy.</p>
+        </div>
+        <div class="uk-width-1-3">
+          <img class="flat-icon" src="assets/images/ocean-conservancy.png" target="_blank">
+          <a href="https://oceanconservancy.org/">
+            <h3>OceanConservancy.org</h3>
+          </a>
+          <p>Together, we create science-based solutions for a healthy ocean and the wildlife and communities that depend on it.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <hr />
+    <div uk-parallax="opacity: 0,1; viewport: 0.5;" class="section-four uk-text-center">
+      <h1>Getting Involved.</h1>
+      <div uk-grid>
+        <div class="uk-width-1-5">
+          <img class="uk-padding-remove-bottom" src="assets/images/001-bicycle.png" uk-tooltip="title: You could cycle.; pos: top; offset: -30;" />
+          <h4 class="uk-text-center">Cycling</h4>
+        </div>
+        <div class="uk-width-1-5">
+          <img class="uk-padding-remove-bottom" src="assets/images/002-charity.png" uk-tooltip="title: Just send a donation.; pos: top; offset: -30;" />
+          <h4 class="uk-text-center">Donating</h4>
+        </div>
+        <div class="uk-width-1-5">
+          <img class="uk-padding-remove-bottom" src="assets/images/003-hands.png" uk-tooltip="title: Volunteer your time.; pos: top; offset: -30;" />
+          <h4 class="uk-text-center">Volunteering</h4>
+        </div>
+        <div class="uk-width-1-5">
+          <img class="uk-padding-remove-bottom" src="assets/images/004-mountain.png" uk-tooltip="title: Hiking is cool too.; pos: top; offset: -30;" />
+          <h4 class="uk-text-center">Mountaineering</h4>
+        </div>
+        <div class="uk-width-1-5">
+          <img class="uk-padding-remove-bottom" src="assets/images/005-hiking.png" uk-tooltip="title: Rock climb to donate!; pos: top; offset: -30;" />
+          <h4 class="uk-text-center">Climbing</h4>
+        </div>
+      </div>
+    </div>
+
+    <div uk-parallax="opacity: 0,1; viewport: 0.5;" class="uk-text-center section-five" id="knowMore">
+      <h1>Like to know more?</h1>
+      <h3>Just let us know how we can help and a friendly(ish) team-member will get back to you.</h3>
+      <form class="uk-padding-large" action="https://formspree.io/outdoorrepo@gmail.com" method="POST">
+        <fieldset class="uk-fieldset">
+          <div class="uk-margin">
+            <input type="text" class="uk-input" name="name" placeholder="What's your name?">
+          </div>
+          <div class="uk-margin">
+            <input type="email" class="uk-input" name="_replyto" placeholder="Email address">
+          </div>
+          <div class="uk-margin">
+            <textarea class="uk-textarea" name="message" rows="5" placeholder="What can we help with?"></textarea>
+          </div>
+          <button class="uk-button uk-button-primary" value="Send">Submit</button>
+        </fieldset>
+      </form>
+      <img src="assets/images/logo.png" alt="outdoorrepo logo" />
+    </div>
+
+
+  </main>
+
+  <footer>
+
+    <div class="bottom-nav uk-text-center uk-margin-remove">
+      <ul>
+        <li>
+          <a href="https://app.termly.io/document/terms-of-use-for-website/756933db-2d42-44fd-87bc-4b6b9870d7c2" target="_blank">Terms</a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1ez6RFjhpI1JbhyXGhVcdkQgLedelahf-/view?usp=sharing" target="_blank">Privacy</a>
+        </li>
+        <!-- FAQ modal link -->
+        <li>
+          <a href="#faq-modal" uk-toggle>FAQs</a>
+        </li>
+      </ul>
+      <p>
+        Copyright &copy; 2018-2019 | outdoorRepo
+      </p>
+    </div>
+
+
+  </footer>
+
+  <!-- Initial Modal -->
+
+  <div id="welcome-modal" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+      <p>Hey! It looks like it's your first time visiting us.</p>
+      <p>We're excited that you've dropped by! Poke around a little and let us know if you have any questions by opening up a chat or using the contact us form!</p>
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+    </div>
+  </div>
+
+  <!-- FAQ modal -->
+  <div id="faq-modal" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+
+      <ul uk-accordion>
+        <li class="uk-open">
+          <a class="uk-accordion-title" href="#">What is OutdoorRepo?</a>
+          <div class="uk-accordion-content">
+            <p>
+              We are a small non-profit organization that has come up with a scalable way to fund charities through affiliate programming.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a class="uk-accordion-title" href="#">How does it work?</a>
+          <div class="uk-accordion-content">
+            <p>
+              Once you sign up, you'll be asked to select a few basic preferences including which outdoor activities you're interested in, and which charity you would like to support. From there, you can select any number of brands that you like buying your gear from
+              and they will then show up as links on your personal dashboard. Now you can feel free to shop using those new links from the brands you chose and a percentage of your purchase automatically is donated to your selected charity.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a class="uk-accordion-title" href="#">How do my purchases benefit charities?</a>
+          <div class="uk-accordion-content">
+            <p>
+              Each time you make a purchase using one of Outdoor Repo's links, your selected charity receives a portion of the total sale.
+            </p>
+          </div>
+        </li>
+        <li>
+          <a class="uk-accordion-title" href="#">How do I sign up?</a>
+          <div class="uk-accordion-content">
+            <p>
+              Simplest answer yet! Just click the Sign Up button in the top right corner and follow the steps.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@5.5.0/dist/typeit.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+  <script src="assets/app.js"></script>
+
+
+
+  <!--typeItJS Scripts -->
+  <script>
+    var instance = new TypeIt('#hello', {})
+      .type('<strong>OutdoorRepo</strong>')
+      .pause(700)
+      .break()
+      .type('<strong>Spend to give back</strong>')
+  </script>
+
+</body>
+
+</html>
